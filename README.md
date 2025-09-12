@@ -19,14 +19,13 @@
 > Added part and product names utilizing website functionality
 ### D
 > ### TODO:
-> * Create about.html -
-> * Link page in mainscreen - Manually add controller and service? I think there should be a dedicated way for this.
 > ### Prompt
 > > Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
 > ### File Names
->
+>   mainscreen.html, about.html, AboutScreenController
 > ### Changes
-> 
+> * Created about page with about.html and AboutScreenController
+> * Added <a> to mainscreeen and about to link to each other 
 ### E
 > ### TODO:
 > *
