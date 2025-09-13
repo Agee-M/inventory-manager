@@ -12,10 +12,10 @@
 > ### File Names:
 > mainscreen.html
 > ### Changes:
-> Line 14
+> Line (14)
 > * Changed page title to reflect shop name
 > 
-> Line 19
+> Line (19)
 > * Replaced "Shop" with shop name
 > 
 ### D
@@ -43,7 +43,7 @@
 > ### File Names
 > BootStrapData.java
 > ### Changes
-> Lines 66 - 121
+> Lines (66 - 121)
 > * Added 5 parts and 5 products
 > * Made it so that it doesn't duplicate when running multiple times
 ### F
@@ -56,7 +56,7 @@
 > ### File Names
 > mainscreen.html, confirmationbuyproduct.html, emptyerror.html, AddProductController.java
 > ### Changes
-> Mainscreen.html (lines 84-85)
+> Mainscreen.html (lines 84 - 85)
 > * Added buy product button
 > 
 > Created confirmationbuyproduct.html (lines 1 - 32)
@@ -70,24 +70,65 @@
 > * Gives error when buying 0 inventory
 > * Gives confirmation otherwise - removes 1 from inventory
 ### G
-> ### TODO:
-> *
 > ### Prompt
-> >
+> > Modify the parts to track maximum and minimum inventory by doing the following:
+>>* Add additional fields to the part entity for maximum and minimum inventory.
+>>* Modify the sample inventory to include the maximum and minimum fields.
+>>* Add to the InhousePartForm and OutsourcedPartForm forms additional text inputs for the inventory so the user can set the maximum and minimum values.
+>>* Rename the file the persistent storage is saved to.
+>>* Modify the code to enforce that the inventory is between or at the minimum and maximum value.
 > ### File Names
+> mainscreen.html, InhousePartForm.html, OutsourcedPartForm.html, InventoryValidator.java, ValidInventory.java, part.java, BootStrapData.java
 >
 > ### Changes
->
+> Mainscreen.html
+> * Lines (39 - 40): Added new headers for table (Min/Max)
+> * Lines (49 - 50): Added applicable row data (Min/Max)
+> 
+> InhousePartForm.html & OutsourcedPartForm.html (lines 16 - 35)
+> * Gave names for input forms so it's legible when filled
+> * Added Min and Max inventory input forms
+> * Added validation for incorrect input
+> 
+> Created InventoryValidator.java (lines 1 - 41)
+> * Validates input (input > max or input < min)
+> 
+> Created ValidInventory.java (lines 1 - 24)
+> * Generic input validator message
+> 
+> BootStrapData.java 
+> * Lines (72, 73, 84, 85, 96, 97, 108, 109, 119, 120): Adds default min and max inventory
+> 
+> Part.java
+> * Lines (33 - 36): Initializes min/max inventory values & adds input validation for negative numbers
+> * Lines (99 - 115): Add getters and setters for min/max inventory values
 ### H
 > ### TODO:
 > *
 > ### Prompt
-> >
+> > Add validation for between or at the maximum and minimum fields. The validation must include the following:
+>>*  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
+>>*  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
+>>*  Display error messages when adding and updating parts if the inventory is greater than the maximum.
 > ### File Names
 >
 > ### Changes
 >
 ### I
-> 
+> ### TODO:
+> *
+> ### Prompt
+> >
+> ### File Names
+>
+> ### Changes
+>
 ### J
-> 
+> ### TODO:
+> *
+> ### Prompt
+> >
+> ### File Names
+>
+> ### Changes
+>

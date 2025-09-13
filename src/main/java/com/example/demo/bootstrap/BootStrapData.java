@@ -66,9 +66,11 @@ public class BootStrapData implements CommandLineRunner {
             // Part 1 - Inhouse
             InhousePart deck = new InhousePart();
             deck.setName("Deck");
-            deck.setInv(5);
+            deck.setInv(25);
             deck.setPrice(50.0);
             deck.setId(1);
+            deck.setMinInv(1);
+            deck.setMaxInv(50);
             inhousePartRepository.save(deck);
             InhousePart thePart = null;
 
@@ -76,9 +78,11 @@ public class BootStrapData implements CommandLineRunner {
             // Part 2 - Inhouse
             InhousePart wheels = new InhousePart();
             wheels.setName("wheels");
-            wheels.setInv(12);
+            wheels.setInv(30);
             wheels.setPrice(25.0);
             wheels.setId(2);
+            wheels.setMinInv(1);
+            wheels.setMaxInv(50);
             inhousePartRepository.save(wheels);
 
 
@@ -86,9 +90,11 @@ public class BootStrapData implements CommandLineRunner {
             OutsourcedPart grip = new OutsourcedPart();
             grip.setCompanyName("Hold On");
             grip.setName("Grip Tape");
-            grip.setInv(3);
+            grip.setInv(15);
             grip.setPrice(5.0);
             grip.setId(3);
+            grip.setMinInv(1);
+            grip.setMaxInv(25);
             outsourcedPartRepository.save(grip);
 
 
@@ -96,18 +102,22 @@ public class BootStrapData implements CommandLineRunner {
             OutsourcedPart trucks = new OutsourcedPart();
             trucks.setCompanyName("Thunder Trucks");
             trucks.setName("Trucks");
-            trucks.setInv(4);
+            trucks.setInv(25);
             trucks.setPrice(10.0);
             trucks.setId(4);
+            trucks.setMinInv(1);
+            trucks.setMaxInv(30);
             outsourcedPartRepository.save(trucks);
 
             // Part 5 - Outsourced
             OutsourcedPart screws = new OutsourcedPart();
             screws.setCompanyName("JR Fasteners");
             screws.setName("Screws");
-            screws.setInv(5);
+            screws.setInv(56);
             screws.setPrice(1.0);
             screws.setId(30);
+            screws.setMinInv(1);
+            screws.setMaxInv(100);
             outsourcedPartRepository.save(screws);
 
             // Print out parts to console
