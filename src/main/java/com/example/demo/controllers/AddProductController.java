@@ -112,6 +112,23 @@ public class AddProductController {
         return "productForm";
     }
 
+    // Make buy button work
+    @GetMapping("/buyproduct")
+    public String buyProduct(@RequestParam("productID") int theId, Model theModel) {
+        ProductService productService = context.getBean(ProductServiceImpl.class);
+        Product product2=productService.findById(theId);
+
+        if (product2.getInv() == 0){
+            return "emptyerror";
+        } else{
+            // Removes 1 from inventory
+            product2.setInv(product2.getInv()-1);
+            productService.save(product2);
+
+            return "confirmationbuyproduct";
+        }
+    }
+
     @GetMapping("/deleteproduct")
     public String deleteProduct(@RequestParam("productID") int theId, Model theModel) {
         ProductService productService = context.getBean(ProductServiceImpl.class);

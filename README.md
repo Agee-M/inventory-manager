@@ -18,7 +18,6 @@
 > Line 19
 > * Replaced "Shop" with shop name
 > 
-> Added part and product names utilizing current website functionality
 ### D
 > ### TODO:
 > * Ask if you need to include the lines for about.html and AboutScreenController
@@ -27,13 +26,14 @@
 > ### File Names
 >   mainscreen.html, about.html, AboutScreenController
 > ### Changes
-> Controllers directory
-> * Created AboutScreenController
+> Created AboutScreenController.java (lines 1 - 14)
+> * Helps mainscreen link to about
 > 
-> Templates directory
-> * Created about.html with link to mainscreen
+> Created about.html (lines 1 - 27)
+> * Gives a company intro 
+> * Links to mainscreen.html 
 > 
-> Line 20 (mainscreen.html)
+> Mainscreen.html (line 20)
 > * Added link to about.html 
 ### E
 > ### TODO:
@@ -41,24 +41,52 @@
 > ### Prompt
 > > Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
 > ### File Names
-> BootStrapData
+> BootStrapData.java
 > ### Changes
 > Lines 66 - 121
-> * Added 5 parts and 5 products in
+> * Added 5 parts and 5 products
 > * Made it so that it doesn't duplicate when running multiple times
 ### F
-> > ### TODO:
+
+> ### Prompt
+> >Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
+>>* The “Buy Now” button must be next to the buttons that update and delete products.
+>>* The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.
+>>* Display a message that indicates the success or failure of a purchase.
+> ### File Names
+> mainscreen.html, confirmationbuyproduct.html, emptyerror.html, AddProductController.java
+> ### Changes
+> Mainscreen.html (lines 84-85)
+> * Added buy product button
+> 
+> Created confirmationbuyproduct.html (lines 1 - 32)
+> * Default page for confirmed buying with button to home
+> 
+> Created emptyerror.html (lines 1 - 32)
+> * Duplicate confirmationbuyproduct page with error message
+> 
+> AddProductController.java (lines 115 - 131)
+> * Added Get mapping for Buy button on mainscreen
+> * Gives error when buying 0 inventory
+> * Gives confirmation otherwise - removes 1 from inventory
+### G
+> ### TODO:
 > *
 > ### Prompt
->
+> >
 > ### File Names
 >
 > ### Changes
 >
-### G
-> 
 ### H
-> 
+> ### TODO:
+> *
+> ### Prompt
+> >
+> ### File Names
+>
+> ### Changes
+>
 ### I
 > 
 ### J
