@@ -78,7 +78,7 @@
 >>* Rename the file the persistent storage is saved to.
 >>* Modify the code to enforce that the inventory is between or at the minimum and maximum value.
 > ### File Names
-> mainscreen.html, InhousePartForm.html, OutsourcedPartForm.html, InventoryValidator.java, ValidInventory.java, part.java, BootStrapData.java
+> mainscreen.html, InhousePartForm.html, OutsourcedPartForm.html, InventoryValidator.java, ValidInventory.java, part.java, BootStrapData.java, application.properties.
 >
 > ### Changes
 > Mainscreen.html
@@ -102,18 +102,30 @@
 > Part.java
 > * Lines (33 - 36): Initializes min/max inventory values & adds input validation for negative numbers
 > * Lines (99 - 115): Add getters and setters for min/max inventory values
+> 
+> application.properties (line 6)
+> * Updated database via renaming
 ### H
 > ### TODO:
-> *
+> * Find out what links PARTS to PRODUCTS
+> * Add Min/Max to product detail (Available and Associated)
+> * Error page for submitting too many 
 > ### Prompt
 > > Add validation for between or at the maximum and minimum fields. The validation must include the following:
 >>*  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
 >>*  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
 >>*  Display error messages when adding and updating parts if the inventory is greater than the maximum.
 > ### File Names
->
+> EnufPartsValidator.java, productForm.html
 > ### Changes
->
+> EnufPartsValidator.java (lines 36 - 39)
+> * Reworked the default validator to include positive numbers below minInv
+> * Displays error messaging requesting more parts inventory for change (ValidEnufParts.java)
+> 
+> productForm.html (lines 40, 41, 50, 51, 66, 65, 74, 75)
+> * Added Min/Max columns in Products Form
+> 
+> See Section G "Created InventoryValidator.java(lines 1 - 41)" for Max/Min input validator requirements
 ### I
 > ### TODO:
 > *
