@@ -1,8 +1,6 @@
 
 # Changelog:
-> Include:
-> - Commit with a message and push when you complete each of the tasks listed below
-> - Prompt, file name, line number, and change.
+
 ### C
 
 > ### TODO:
@@ -106,10 +104,6 @@
 > application.properties (line 6)
 > * Updated database via renaming
 ### H
-> ### TODO:
-> * Find out what links PARTS to PRODUCTS
-> * Add Min/Max to product detail (Available and Associated)
-> * Error page for submitting too many 
 > ### Prompt
 > > Add validation for between or at the maximum and minimum fields. The validation must include the following:
 >>*  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
@@ -127,14 +121,13 @@
 > 
 > See Section G "Created InventoryValidator.java(lines 1 - 41)" for Max/Min input validator requirements
 ### I
-> ### TODO:
-> *
 > ### Prompt
-> >
+> > Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
 > ### File Names
->
+> PartTest.java
 > ### Changes
->
+>  Lines (159 - 177)
+> * Added testMin and testMax for inhouse and outsource parts
 ### J
 > ### TODO:
 > *
