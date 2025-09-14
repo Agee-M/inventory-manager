@@ -1,10 +1,8 @@
 
 # Changelog:
 
-### C
+## C
 
-> ### TODO:
-> * Ask about extra requirement here
 > ### Prompt:
 > > Customize the HTML user interface for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
 > ### File Names:
@@ -16,14 +14,12 @@
 > Line (19)
 > * Replaced "Shop" with shop name
 > 
-### D
-> ### TODO:
-> * Ask if you need to include the lines for about.html and AboutScreenController
-> ### Prompt
+## D
+> ### Prompt:
 > > Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
-> ### File Names
+> ### File Names:
 >   mainscreen.html, about.html, AboutScreenController
-> ### Changes
+> ### Changes:
 > Created AboutScreenController.java (lines 1 - 14)
 > * Helps mainscreen link to about
 > 
@@ -33,27 +29,25 @@
 > 
 > Mainscreen.html (line 20)
 > * Added link to about.html 
-### E
-> ### TODO:
-> * Ask if I need to include setID for outsource
-> ### Prompt
+## E
+> ### Prompt:
 > > Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
-> ### File Names
+> ### File Names:
 > BootStrapData.java
-> ### Changes
+> ### Changes:
 > Lines (66 - 121)
 > * Added 5 parts and 5 products
 > * Made it so that it doesn't duplicate when running multiple times
-### F
+## F
 
-> ### Prompt
+> ### Prompt:
 > >Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
 >>* The “Buy Now” button must be next to the buttons that update and delete products.
 >>* The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.
 >>* Display a message that indicates the success or failure of a purchase.
-> ### File Names
+> ### File Names:
 > mainscreen.html, confirmationbuyproduct.html, emptyerror.html, AddProductController.java
-> ### Changes
+> ### Changes:
 > Mainscreen.html (lines 84 - 85)
 > * Added buy product button
 > 
@@ -67,18 +61,18 @@
 > * Added Get mapping for Buy button on mainscreen
 > * Gives error when buying 0 inventory
 > * Gives confirmation otherwise - removes 1 from inventory
-### G
-> ### Prompt
+## G
+> ### Prompt:
 > > Modify the parts to track maximum and minimum inventory by doing the following:
 >>* Add additional fields to the part entity for maximum and minimum inventory.
 >>* Modify the sample inventory to include the maximum and minimum fields.
 >>* Add to the InhousePartForm and OutsourcedPartForm forms additional text inputs for the inventory so the user can set the maximum and minimum values.
 >>* Rename the file the persistent storage is saved to.
 >>* Modify the code to enforce that the inventory is between or at the minimum and maximum value.
-> ### File Names
+> ### File Names:
 > mainscreen.html, InhousePartForm.html, OutsourcedPartForm.html, InventoryValidator.java, ValidInventory.java, part.java, BootStrapData.java, application.properties.
 >
-> ### Changes
+> ### Changes:
 > Mainscreen.html
 > * Lines (39 - 40): Added new headers for table (Min/Max)
 > * Lines (49 - 50): Added applicable row data (Min/Max)
@@ -103,15 +97,15 @@
 > 
 > application.properties (line 6)
 > * Updated database via renaming
-### H
-> ### Prompt
+## H
+> ### Prompt:
 > > Add validation for between or at the maximum and minimum fields. The validation must include the following:
 >>*  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
 >>*  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
 >>*  Display error messages when adding and updating parts if the inventory is greater than the maximum.
-> ### File Names
+> ### File Names:
 > EnufPartsValidator.java, productForm.html
-> ### Changes
+> ### Changes:
 > EnufPartsValidator.java (lines 36 - 39)
 > * Reworked the default validator to include positive numbers below minInv
 > * Displays error messaging requesting more parts inventory for change (ValidEnufParts.java)
@@ -120,20 +114,19 @@
 > * Added Min/Max columns in Products Form
 > 
 > See Section G "Created InventoryValidator.java(lines 1 - 41)" for Max/Min input validator requirements
-### I
-> ### Prompt
+## I
+> ### Prompt:
 > > Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
-> ### File Names
+> ### File Names:
 > PartTest.java
-> ### Changes
+> ### Changes:
 >  Lines (159 - 177)
 > * Added testMin and testMax for inhouse and outsource parts
-### J
-> ### TODO:
-> *
-> ### Prompt
-> >
-> ### File Names
->
-> ### Changes
->
+## J
+> ### Prompt:
+> > Remove the class files for any unused validators in order to clean your code.
+> ### File Names:
+> DeletePartValidator.java, ValidDeletePart.java, Part.java
+> ### Changes:
+> * Removed DeletePartValidator.java and ValidDeletePart.java
+> * Part.java (lines 3, 18): Removed calls to nonexistent validators
