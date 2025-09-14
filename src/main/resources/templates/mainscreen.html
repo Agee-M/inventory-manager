@@ -13,11 +13,18 @@
 
     <title>Deck It Out</title>
 </head>
+<style>
+    h1, .about{
+        margin: 10px auto;
+        width: 100%;
+        text-align: center;
+    }
+</style>
 <body>
 
 <div class="container">
     <h1>Deck It Out Shop</h1>
-    <a th:href="@{/about}" class="btn btn-primary btn-sm mb-3">About</a>
+    <a th:href="@{/about}" class="btn btn-primary btn-sm mb-3 about">About</a>
     <hr>
     <h2>Parts</h2>
     <form th:action="@{/mainscreen}">

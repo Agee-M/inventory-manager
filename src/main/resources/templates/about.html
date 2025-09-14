@@ -13,15 +13,23 @@
 
     <title>About Us</title>
 </head>
+<style>
+    h1, .home, .foot {
+        margin: 10px auto;
+        width: 100%;
+        text-align: center;
+    }
+</style>
 <body>
     <div class="container">
         <h1>About Us</h1>
         <br>
         <p>Our company, Deck It Out, was made with one focus in mind: <b>rolling in style.</b> It's our passion to
             provide stylized skateboards to all skaters in need, from preset options to your very own vision coming
-            to life!</p>
+            to life! <b>Your</b> style, <b>your</b> ride, <b>your</b> way.</p>
+        <p class="foot">It's not <i><b>decked out</b></i> if it isn't <i><b>Deck It Out</b></i></p>
         <br>
-        <a th:href="@{/mainscreen}" class="btn btn-primary btn-sm mb-3">Home</a>
+        <a th:href="@{/mainscreen}" class="btn btn-primary btn-sm mb-3 home">Home</a>
     </div>
 </body>
 </html>
